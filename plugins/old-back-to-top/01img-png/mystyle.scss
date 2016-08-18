@@ -1,0 +1,82 @@
+@import "mixin";
+@charset "UTF-8";
+$toolbar-size: 52px;
+.toolbar{
+	position: fixed;
+	left: 50%;
+	bottom: 5px;
+	margin-left: -$toolbar-size / 2;
+}
+.toolbar-item{
+    position: relative;
+	display: block;
+	width: $toolbar-size;
+	height: $toolbar-size;
+	background-image: url(img/toolbar.png);
+	background-repeat:no-repeat;
+	/*background-color:red;*/
+	margin-top: 1px;
+	/*
+	transition: background-position 1s;
+	*/
+    @include transition(background-position 0.3s);
+
+	&:hover {
+	.toolbar-layer{
+	opacity: 1;
+	filter:alpha(opacity=100);
+	transform: scale(1);
+	}
+	}
+} 
+.toolbar-item-wx{
+/*
+	background-position: 0 -798px;
+&:hover{
+	background-position: 0 -860px;
+	}
+*/
+	@include toolbar-item(-798px,-860px);
+
+	.toolbar-layer{
+	height: 212px;
+	background-position: 0 0;
+	}
+
+}
+.toolbar-item-feedback{
+	background-position: 0 -426px;
+&:hover{
+	background-position: 0 -488px;
+	}	
+}
+.toolbar-item-app{
+	background-position: 0 -550px;
+&:hover{
+	background-position: 0 -612px;
+	}	
+	.toolbar-layer{
+	height: 194px;
+	background-position: 0 -222px;
+	}
+}
+.toolbar-item-top{
+	background-position: 0 -674px;
+&:hover{
+	background-position: 0 -736px;
+	}	
+}
+.toolbar-layer{
+	position: absolute;
+	right: $toolbar-size - 6;
+	bottom: -10px;
+	width: 172px;
+	background-image: url(img/toolbar.png);
+	background-repeat: no-repeat;
+	opacity: 0;
+	filter: alpha(opacity=0);
+	/*transform-origin: right bottom;*/
+	transform-origin: 95% 95%;
+	transform:scale(0.01);
+	transition: all 0.5s;
+}

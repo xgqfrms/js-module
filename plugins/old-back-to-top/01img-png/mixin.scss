@@ -1,0 +1,14 @@
+@mixin toolbar-item($pos,$hoverpos){
+		background-position: 0 $pos;
+&:hover{
+	background-position: 0 $hoverpos;
+	}
+}
+
+@mixin transition($transition){
+	-webkit-transition: $transition;
+	-moz-transition: $transition;
+	-ms-transition: $transition;
+	-o-transition: $transition;
+	transition: $transition;
+}
