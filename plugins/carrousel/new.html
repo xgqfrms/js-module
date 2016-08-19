@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>前端面试江湖:JS实现“旋转木马”幻灯片效果</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}s
+		body{
+			background: rgba(0,0,0,0.7);
+		}
+		.test{
+			margin: 100px;
+			position: relative;
+			border: 1px solid red;
+			width: 320px;
+			height: 230px;
+			overflow: hidden;
+			float: left;
+		}
+		.mask{
+			background-color: rgba(0,0,0,0.8);
+			width: 320px;
+			height: 230px;
+			top: 0px;
+			position: absolute;
+			z-index: 9999;
+			color: #fff;
+			text-align: center;
+			text-transform: capitalize;
+			font-size: 2rem;
+			transition: all 1s ease 0.5s;
+		}
+		.test:hover .mask{
+			top: 200px;
+		}
+		.test:hover .img{
+			/*position: -320px;*/
+			/*transform: translate3d(-310px,0,0);*/
+			transform: translate3d(-620px,0,0);
+		}
+	</style>
+</head>
+<body>
+	<div class="test">
+		<img id="img" class="img" src="./carrousel.gif" alt="">
+		<div class="mask">
+			<span>mask</span>
+		</div>
+	</div>
+</body>
+</html>
