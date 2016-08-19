@@ -18,38 +18,44 @@
 			float: left;
 		}
 		.div1{
-			background-color: rgba(0,255,0,0.7);
 			width: 228px;
 			height: 128px;
 			margin: 10px auto;
 			padding: 10px;
 			overflow: hidden;
+			/*
+			background-color: rgba(0,255,0,0.7);
 			background-image: url(./1.jpg);
 			background-repeat: no-repeat;
-			cursor: pointer;
+			background-attachment: fixed;
 			background-position: 10px;
+			//https://www.w3.org/TR/CSS2/colors.html
+			*/
+			background: rgba(0,255,0,0.7) url(./1.jpg) no-repeat scroll 10px;
 			position: relative;
 		}
 		.div2{
-			background-color: rgba(255,0,255,0.7);
 			width: 228px;
 			height: 128px;
 			margin: 10px auto;
 			padding: 10px;
+			/*background-color: rgba(255,0,255,0.7);
 			background-image: url(./2.jpg);
 			background-repeat: no-repeat;
-			background-position: 10px;
+			background-position: 10px;*/
+			background: rgba(255,0,255,0.7) url(./2.jpg) no-repeat scroll 10px;
 			position: relative;
 		}
 		.div3{
-			background-color: rgba(0,0,255,0.7);
 			width: 228px;
 			height: 128px;
 			margin: 10px auto;
 			padding: 10px;
+			/*background-color: rgba(0,0,255,0.7);
 			background-image: url(./3.jpg);
 			background-repeat: no-repeat;
-			background-position: 10px;
+			background-position: 10px;*/
+			background: rgba(0,0,255,0.7) url(./3.jpg) no-repeat scroll 10px;
 			position: relative;
 		}
 		span{
@@ -66,7 +72,7 @@
 			background-color: rgba(255,255,255,0.7);
 			transition: all 0.5s ease;
 		}
-		span:hover{
+		a:hover span{
 			height: 78px;
 			background-color: rgba(255,255,255,1);
 			color: #000;
@@ -84,15 +90,21 @@
 </head>
 <body>
 	<div>
-		<div class="div div1" id="div1">
-			<span>linux <br/><i>Linux 达人养成计划</i></span>
-		</div>		
-		<div class="div div2">
-			<span>linux<br/><i>Linux 服务管理</i></span>
-		</div>		
-		<div class="div div3">
-			<span>swift<br/><i>玩转 Swift(第三季)</i></span>
-		</div>
+		<a href="http://xgqfrms.xyz" target="_blank">
+			<div class="div div1" id="div1">
+					<span>linux <br/><i>Linux 达人养成计划</i></span>
+			</div>
+		</a>
+		<a href="http://xgqfrms.xyz" target="_blank">
+			<div class="div div2">
+				<span>linux<br/><i>Linux 服务管理</i></span>
+			</div>
+		</a>		
+		<a href="http://xgqfrms.xyz" target="_blank">
+			<div class="div div3">
+				<span>swift<br/><i>玩转 Swift(第三季)</i></span>
+			</div>
+		</a>
 	</div>
 	<script>
 		// var x=0;
