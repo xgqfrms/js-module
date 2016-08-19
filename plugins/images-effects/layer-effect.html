@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>layer effect</title>
+	<style>
+		.div-box{
+			width: 200px;
+			height: 200px;
+			float: left;
+			padding: 10px;
+			border: 3px solid red;
+			margin: 3px;
+			/* https://www.quora.com/How-do-I-change-the-margin-color-on-CSS */
+			position: relative;
+			overflow: hidden;
+			background-color: rgba(0,0,0,0.3);
+		}
+		.div-x{
+			width: 200px;
+			height: 100px;
+			background-color: rgba(0,255,0,0.7);
+			/*position: absolute;*/
+		}
+		.div-id{
+			width: 200px;
+			height: 100px;
+			background-color: rgba(255,0,255,0.7);
+		}
+		.div-id a{
+			top: 100px;
+			display: block;
+		}
+		.space{
+			display: block;
+			width: 5px;
+			height: 100px;
+			float: left;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<div class="div-box">
+			<div class="div-x"></div>
+			<div id="div-id" class="div-id">
+				<a href="#">1</a>
+			</div>
+		</div>
+		<span class="space"></span>
+		<div class="div-box">
+			<div class="div-x"></div>
+			<div id="div-id2" class="div-id">
+				<a href="#">2</a>
+			</div>
+		</div>
+		<span class="space"></span>
+		<div class="div-box">
+			<div class="div-x"></div>
+			<div id="div-id3" class="div-id">
+				<a href="#">3</a>
+			</div>
+		</div>
+	</div>
+	<script>
+	    var _id = '';
+		function shadow_layer(_id) {
+			var _div = document.getElementById(_id);
+			var _a = _div.getElementsByTagName('a');
+			var _top = _a[0].style.top;
+			if (!_top) {
+				_top = 0;
+			} else {
+				_top = 100 + "px";
+			}
+		}
+		// test
+		shadow_layer('div-id');
+		// alert("hello world!");
+	</script>
+</body>
+</html>
