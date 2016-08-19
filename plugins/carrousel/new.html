@@ -19,12 +19,13 @@
 			height: 230px;
 			overflow: hidden;
 			float: left;
+			transition: all 1s ease 0.5s;
 		}
 		.mask{
 			background-color: rgba(0,0,0,0.8);
 			width: 320px;
 			height: 230px;
-			top: 0px;
+			top: 200px;
 			position: absolute;
 			z-index: 9999;
 			color: #fff;
@@ -34,12 +35,24 @@
 			transition: all 1s ease 0.5s;
 		}
 		.test:hover .mask{
-			top: 200px;
+			top: 0px;
+			transition: all 1s ease 0.5s;
 		}
 		.test:hover .img{
 			/*position: -320px;*/
 			/*transform: translate3d(-310px,0,0);*/
 			transform: translate3d(-620px,0,0);
+			transition: all 1s ease 0.5s;
+		}
+		ul li{
+			float: left;
+			width: 33%;
+			height: 50px;
+			list-style: none;
+		}
+		button{
+			width: 100%;
+			height: 100%;
 		}
 	</style>
 </head>
@@ -50,5 +63,29 @@
 			<span>mask</span>
 		</div>
 	</div>
+	<div class="test">
+		<ul>
+			<li>
+				<button onclick="change_img(1);">img1</button>
+			</li>
+			<li>
+				<button onclick="change_img(2);">img2</button>
+			</li>
+			<li>
+				<button onclick="change_img(3);">img3</button>
+			</li>
+		</ul>
+	</div>
+	<script>
+		var index;
+		function change_img(index) {
+			var img = document.getElementById('img');
+			var left = -((index-1)*310)+"px";
+			img.style.transform.translate3d = (left,0,0);
+			console.log("index="+index);
+			// console.log("\n");
+			console.log("left="+left);
+		}
+	</script>
 </body>
 </html>

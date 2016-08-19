@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Accordion</title>
+	<!-- http://www.imooc.com/code/1017 -->
+	<style>
+		#imageMenu{
+			width:500px;
+			height:200px;
+			overflow:hidden;
+		}
+		/*动画样式*/
+		#imageMenu ul *{
+			transition:all linear 0.2s;
+		}
+		#imageMenu ul{
+			width:800px;
+			height:200px;
+			padding: 0;
+			margin: 0;
+			list-style: none;
+		}
+		#imageMenu li{
+			float:left;
+		}
+		#imageMenu ul li a{
+			width: 73px;
+		}
+		/*放大后的样式*/
+		#imageMenu ul li.big a {
+			width:200px;
+		}
+		#imageMenu li a{
+			width:98px;
+			height:200px;
+			display:block;
+			text-indent:9999px;
+			border-right:2px solid #fff;
+			cursor:pointer;
+			overflow:hidden;
+		}
+		#imageMenu li.landscapes a{
+			background:url(http://img.mukewang.com/53451c66000170b503200200.jpg) no-repeat;
+		}
+		#imageMenu li.people a{
+			background:url(http://img.mukewang.com/53451cc900012a0303200200.jpg) no-repeat;
+		}
+		#imageMenu li.nature a{
+			background:url(http://img.mukewang.com/53451d020001336503200200.jpg) no-repeat;
+		}
+		#imageMenu li.urban a{
+			background:url(http://img.mukewang.com/53451d370001d17203200200.jpg) no-repeat;
+		}
+		#imageMenu li.abstract a{
+			background:url(http://img.mukewang.com/53451d5700013fd203200200.jpg) no-repeat;
+		}
+	</style>
+</head> 
+<body> 
+	<div id="imageMenu">
+		<ul>
+		    <li class="landscapes">
+		    	<a href="#link1">Landscapes</a>
+		    </li>
+		    <li class="people big">
+		    	<a href="#link1">People</a>
+		    </li>
+		    <li class="nature">
+		    	<a href="#link1">Nature</a>
+		    </li>
+		    <li class="urban">
+		    	<a href="#link1">Urban</a>
+		    </li>
+		    <li class="abstract">
+		    	<a href="#link1">Abstract</a>
+		    </li>
+		</ul>
+	</div>
+	<script>
+		function bind(el, eventType, callback){
+			if(typeof el.addEventListener === 'function'){
+				//标准事件绑定方法
+			    el.addEventListener(eventType, callback, false);
+			}else if(typeof el.attechEvent === 'function'){
+				//IE事件绑定方法
+			    el.attachEvent('on' + eventType, callback);
+			}
+		}
+		function mouseoverHandler(e){
+			var target = e.target || e.srcElement;
+			var outer = document.getElementById('imageMenu');
+			var list = outer.getElementsByTagName('li');
+			//清空所有LI元素的big
+			for(var i = 0; i < list.length; i++){
+			    list[i].className = list[i].className.replace(/ ?big/g, '');
+			}
+			//根据事件的冒泡原理，找到需要变更class 的LI元素
+			while(target.tagName != 'LI' || target.tagName == 'BODY'){
+			    target = target.parentNode;
+			}  
+			//给当前元素加上class big
+			target.className += ' big';
+		}
+		function initList(){
+			//取得外部元素
+			var outer = document.getElementById('imageMenu');
+			//取得每个列表项
+			var list = outer.getElementsByTagName('li');
+			for(var i =0; i < list.length; i++){
+			    //对每个列表绑定鼠标悬停事件的监听
+			    bind(list[i], 'mouseover', mouseoverHandler);
+			}
+		}
+		//执行初始化函数
+		initList();
+	</script>
+</body>
+</html>
