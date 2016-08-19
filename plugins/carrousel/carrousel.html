@@ -3,7 +3,13 @@
 <head>
 	<meta charset="UTF-8">
 	<title>carrousel</title>
-	<style>
+	<style>	    
+	    @import url(https://fonts.googleapis.com/css?family=Open+Sans:300|Tangerine);
+	    /*
+	    @import url(https://raw.githubusercontent.com/xgqfrms/xgqfrms/gh-pages/fonts/css?family=Open+Sans:300|Tangerine);
+
+	    https://raw.githubusercontent.com/xgqfrms/xgqfrms/gh-pages/fonts/woff/tangerine.woff2
+	    */
 		body{
 			background-color: rgba(0,0,0,0.3);
 		}
@@ -81,10 +87,17 @@
 		}
 		i{
 			color: #000;
-			/*font-family: t;*/
 			font-size: 1rem;
 			text-shadow: none;
 			transition: all 0.5s ease 0.5s;
+		}
+		.tangerine {
+		    font-family: 'Tangerine', serif;
+		    font-size: 16px;
+		    text-shadow: 4px 4px 4px #aaa;
+		    margin-top: 30px;
+		    margin-bottom: 20px;
+		    line-height: 40px;
 		}
 	</style>
 </head>
@@ -92,17 +105,17 @@
 	<div>
 		<a href="http://xgqfrms.xyz" target="_blank">
 			<div class="div div1" id="div1">
-					<span>linux <br/><i>Linux 达人养成计划</i></span>
+					<span>linux <br/><i class="tangerine">Linux 达人养成计划</i></span>
 			</div>
 		</a>
 		<a href="http://xgqfrms.xyz" target="_blank">
 			<div class="div div2">
-				<span>linux<br/><i>Linux 服务管理</i></span>
+				<span>linux<br/><i class="tangerine">Linux 服务管理</i></span>
 			</div>
 		</a>		
 		<a href="http://xgqfrms.xyz" target="_blank">
 			<div class="div div3">
-				<span>swift<br/><i>玩转 Swift(第三季)</i></span>
+				<span>swift<br/><i class="tangerine">玩转 Swift(第三季)</i></span>
 			</div>
 		</a>
 	</div>
