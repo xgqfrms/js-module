@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>carrousel</title>
+	<style>
+		body{
+			background-color: rgba(0,0,0,0.3);
+		}
+		.div{
+			background-color: rgba(0,0,0,0.7);
+			width: 70%;
+			height: auto;
+			margin: 0 auto;
+			padding: 10px auto;
+			overflow: hidden;
+		}
+		.div1{
+			background-color: rgba(0,255,0,0.7);
+			width: 297px;
+			height: 200px;
+			margin: 10px auto;
+			padding: 10px;
+			overflow: hidden;
+			background-image: url(./carrousel.gif);
+		}
+		.div2{
+			background-color: rgba(255,0,0,0.7);
+			width: 297px;
+			height: 200px;
+			margin: 10px auto;
+			padding: 10px;
+			background-image: url(./carrousel.gif);
+			background-position:  -310px;
+		}
+		.div3{
+			background-color: rgba(0,0,255,0.7);
+			width: 297px;
+			height: 200px;
+			margin: 10px auto;
+			padding: 10px;
+			background-image: url(./carrousel.gif);
+			background-position:  -620px;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<div class="div div0">
+			<img class="img0" src="./carrousel.gif" alt="">
+		</div>
+		<div class="div div1">
+			<!-- <img class="img1" src="./carrousel.gif" alt=""> -->
+		</div>		
+		<div class="div div2">
+			<!-- <img class="img2" src="./carrousel.gif" alt=""> -->
+		</div>		
+		<div class="div div3">
+			<!-- <img class="img3" src="./carrousel.gif" alt=""> -->
+		</div>
+	</div>
+	<script>
+		var x=0;
+		var y=false;
+		if(x==y){
+			console.log("0=false");
+		}else{
+			console.log("0!=false");
+		}
+	</script>
+</body>
+</html>

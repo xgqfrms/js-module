@@ -3,33 +3,35 @@
 <head>
 	<meta charset="UTF-8">
 	<title>layer effect</title>
+	<!-- https://www.quora.com/How-do-I-change-the-margin-color-on-CSS -->
 	<style>
 		.div-box{
-			width: 200px;
-			height: 200px;
+			width: 300px;
+			height: 400px;
 			float: left;
 			padding: 10px;
 			border: 3px solid red;
-			margin: 3px;
-			/* https://www.quora.com/How-do-I-change-the-margin-color-on-CSS */
+			margin: 10px;
 			position: relative;
 			overflow: hidden;
 			background-color: rgba(0,0,0,0.3);
 		}
 		.div-x{
-			width: 200px;
-			height: 100px;
-			background-color: rgba(0,255,0,0.7);
-			/*position: absolute;*/
+			width: 300px;
+			height: 200px;
+			background-color: rgba(255,255,255,0.7);
 		}
-		.div-id{
-			width: 200px;
-			height: 100px;
+		.div-id1{
+			width: 300px;
+			height: 200px;
 			background-color: rgba(255,0,255,0.7);
+			/*margin-top: -30px;*/
 		}
 		.div-id a{
-			top: 100px;
 			display: block;
+			width: 100%;
+			height: 30px;
+			background-color: rgba(0,255,255,0.7);
 		}
 		.space{
 			display: block;
@@ -45,12 +47,15 @@
 			<div class="div-x"></div>
 			<div id="div-id" class="div-id">
 				<a href="#">1</a>
+				<p>xxxxxxxxxxx</p>
+				<p>xxxxxxxxxxx</p>
+				<p>xxxxxxxxxxx</p>
 			</div>
 		</div>
 		<span class="space"></span>
 		<div class="div-box">
 			<div class="div-x"></div>
-			<div id="div-id2" class="div-id">
+			<div id="div-id2" class="div-id div-id1">
 				<a href="#">2</a>
 			</div>
 		</div>
@@ -63,20 +68,25 @@
 		</div>
 	</div>
 	<script>
-	    var _id = '';
-		function shadow_layer(_id) {
-			var _div = document.getElementById(_id);
-			var _a = _div.getElementsByTagName('a');
-			var _top = _a[0].style.top;
-			if (!_top) {
-				_top = 0;
-			} else {
-				_top = 100 + "px";
-			}
-		}
-		// test
-		shadow_layer('div-id');
-		// alert("hello world!");
+	    // var _id = '';
+		// function shadow_layer(_id) {
+		// 	var _div = document.getElementById(_id);
+		// 	var _a = _div.getElementsByTagName('a');
+		// 	var _top = _a[0].style.top;
+		// 	if (!_top) {
+		// 		_top = 0;
+		// 	} else {
+		// 		_top = -100 + "px";
+		// 	}
+		// }
+		// shadow_layer('div-id');
+		// function onMouseOver(){
+		// 	var div = document.getElementById('div-id');
+		//     var a = div.getElementsByTagName('a');
+		//     var top = a[0].style.top = -200+"px";
+		// }
+		// var _div = document.getElementById('div-id');
+		// _div.onmouseover = onMouseOver();
 	</script>
 </body>
 </html>
