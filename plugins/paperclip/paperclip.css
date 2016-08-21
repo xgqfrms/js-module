@@ -1,0 +1,25 @@
+﻿/*
+	css: http://liujiacai.net/gooreplacer/
+*/
+header h1:before {
+    content: "./ ";
+    font-size: 24px;
+    color: #0f0;
+    background: #fff;
+}
+
+/*
+https://developer.wordpress.org/resource/dashicons/#paperclip
+http://fontawesome.io/icon/paperclip/
+
+paperclip: 回形针/曲别针/报纸夹纸夹/纸夹子 
+
+Glyph :浮雕/象形文字 ()PS
+
+<span class="dashicons dashicons-paperclip"></span>
+*/
+header h1:after {
+    /*content: "回形针/别针icon";*/
+    content: "\f546";
+    font-size: 24px;
+}
