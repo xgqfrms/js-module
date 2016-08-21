@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>box-sizing</title>
+	<!--
+		http://caniuse.com/#search=box-sizing
+		https://www.w3.org/TR/css-ui-3/#box-sizing
+	-->
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		ruby{
+			color: rgba(0,255,255,0.8);
+		}
+		.box{
+			background: rgba(0,0,0,0.7);
+			width: 702px;
+			margin: 10px auto;
+			padding: 1px 0;
+		}
+		.d{
+			border: 1px solid red;
+			text-align: center;
+			margin: 0 auto 10px;
+			background: rgba(0,255,0,0.7);
+			color: rgba(255,0,255,0.7);
+		}
+		.d0{
+			color: rgba(0,0,0,0.7);
+		}
+		.d1{
+			width: 700px;
+		}
+		.d11{
+			width: 700px;
+			margin: auto 30px;
+			padding: 15px;
+		}
+		.d2{
+			width: 700px;
+			/*margin: auto 30px;*/
+			padding: 15px;
+			box-sizing: border-box;
+		}
+		.d3{
+			width: 700px;
+			/*margin: auto 30px;*/
+			padding: 15px;
+			box-sizing: content-box;
+		}
+		/*
+			使用box-sizing: border-box;后，width = width宽度自动减去(padding宽度+border宽度);
+			{ 700 > 668 = (700-[15*2+1*2])}
+
+			使用box-sizing: content-box;后，box.width = width宽度自动加上(padding宽度+border宽度);
+			{ 700 > 732 = (700+[15*2+1*2])} ，效果：盒子整体 右边偏移-30
+			{ 700 = 700} 效果：width 右边偏移 -15
+		*/
+	</style>
+</head>
+<body>
+	<div class="box">
+		<div class="d d0">
+			<h1><strong>box-sizing</strong></h1>
+			<h2>
+				<ruby>夏<rp>(</rp><rt>xgqfrms</rt><rp>)</rp></ruby>
+				<ruby>凌<rp>(</rp><rt>xgqfrms</rt><rp>)</rp></ruby>
+				<ruby>晨<rp>(</rp><rt>xgqfrms</rt><rp>)</rp></ruby>
+			</h2>
+			<h3>CSS Basic User Interface Module Level 3 (CSS3 UI) W3C Candidate Recommendation, 7 July 2015</h3>
+			<p>
+				Method of specifying <b>whether or not</b> an element's <span>borders</span> and <span>padding</span> should be included in size units.
+			</p>
+		</div>
+		<div class="d d1">
+			<h1>width: 700px;</h1>
+		</div>
+		<div class="d d11">
+			<h1>width: 700px;</h1>
+		</div>
+		<div class="d d2">
+			<h1>box-sizing: border-box;</h1>
+		</div>
+		<div class="d d3">
+			<h1>box-sizing: content-box;</h1>
+		</div>
+	</div>
+</body>
+</html>
