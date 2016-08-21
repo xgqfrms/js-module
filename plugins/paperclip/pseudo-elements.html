@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>E::first-letter && text-transform: capitalize;</title>
+	<!-- 
+		text-transform: http://www.cnblogs.com/xgqfrms/p/5786191.html
+		E::first-letter: http://www.cnblogs.com/xgqfrms/p/5662310.html
+	-->
+	<style>
+	    html{
+	    	font-size: 16px;
+	    }
+	    a{
+	    	cursor: pointer;
+	    	text-decoration: none;
+	    }
+	    div{
+	    	border: 1px solid rgba(0,0,0,1);
+	    	width: 50%;
+	    	height: auto;
+	    	margin: 0 auto;
+	    }
+	    .box{
+	    	border: none;
+	    	width: auto;
+	    	height: auto;
+	    }
+	 	.d1 h1{
+	 		text-transform: capitalize;
+	 		color: rgba(0,0,0,0.7);
+	 	}
+	 	.d1 h1::first-letter{
+	 		color: rgba(255,100,100,0.7);
+	 	}
+	 	.d2 h1::first-letter{
+	 		color: #0f0;
+	 		font-size: 2em;
+	 	}
+	 	.d3 h1::before{
+	 		content: 'A';
+	 		color: #f00;
+	 		font-size: 3rem;
+	 	}
+	 	.d3 h2::after{
+	 		content: 'B';
+	 		color: #f0f;
+	 		font-size: 1rem;
+	 	}
+	 	.d4 h1::first-line{
+	 		color: #c3c;
+	 	}
+	 	.h1{
+	 		font-size: 2em;
+	 		font-weight: bold;
+	 	}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<div class="d1">
+			<h1><a href="#" title="text-transform: capitalize;"">text-transform</a></h1>
+			<h1><a href="#" title="text-transform: capitalize;"">text_transform</a></h1>
+			<h1><a href="#" title="text-transform: capitalize;"">text transform</a></h1>
+		</div>
+		<div class="d2">
+			<h1><a href="#" title="E::first-letter"">abc</a></h1>
+			<p class="h1"><a href="#" title="not E::first-letter"">abc</a></p>
+		</div>
+		<div class="d3">
+			<h1><a href="#" title="E::before">*******</a></h1>
+			<h2><a href="#" title="E::after">*******</a></h2>
+		</div>
+		<div class="d4">
+			<h1>
+				<p title="E::first-line">1111111</p>
+				<p title="E::first-line">2222222</p>
+				<p title="E::first-line">3333333</p>
+			</h1>
+		</div>
+		<div class="d5">
+			<h1 title="h1-title">title</h1>
+			<img src="#" alt="image-alt" />
+		</div>
+	</div>
+</body>
+</html>
