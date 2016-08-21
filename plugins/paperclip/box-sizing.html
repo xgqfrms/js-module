@@ -54,10 +54,12 @@
 		/*
 			使用box-sizing: border-box;后，width = width宽度自动减去(padding宽度+border宽度);
 			{ 700 > 668 = (700-[15*2+1*2])}
+			边框盒子
 
 			使用box-sizing: content-box;后，box.width = width宽度自动加上(padding宽度+border宽度);
 			{ 700 > 732 = (700+[15*2+1*2])} ，效果：盒子整体 右边偏移-30
 			{ 700 = 700} 效果：width 右边偏移 -15
+			内容盒子 
 		*/
 	</style>
 </head>
@@ -76,10 +78,10 @@
 			</p>
 		</div>
 		<div class="d d1">
-			<h1>width: 700px;</h1>
+			<h1>true width: 700px;</h1>
 		</div>
 		<div class="d d11">
-			<h1>width: 700px;</h1>
+			<h1>false width: 700px;</h1>
 		</div>
 		<div class="d d2">
 			<h1>box-sizing: border-box;</h1>
