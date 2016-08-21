@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>click-copy-text</title>
+</head>
+<body>
+	<div>
+		<div>
+			<button data="click-copy-text">
+				click-copy-text
+			</button>
+		</div>
+	</div>
+	<!-- just pseudo codes -->
+	<script>
+		/**
+		 * date: 2016.08.21
+		 * author: xgqfrms
+		*/ 
+		function clickCopyText(){
+			var click;
+			var button = document.getElementById('click-copy-text');
+			var date = button.getValue('data');
+			var clipboard = function(){
+				var value = clipboard.setValue(date);
+				return value;
+			}(date);
+		}
+	</script>
+</body>
+</html>
