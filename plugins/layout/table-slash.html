@@ -31,6 +31,7 @@
 			/*display: block; 698x128*/
 			display: block;
 			border-spacing: 0;
+			/*border-spacing: 2px;*/
 		}
 		tbody {
 		    /*display: table-row-group; 497x128*/
@@ -50,19 +51,36 @@
 		    vertical-align: inherit;*/
 		    display: block;
 		    float: left;
-		    text-align: center;
+		    /*text-align: center;*/
 		    vertical-align: middle;
+		    padding-left: 10px;
+		    padding-top: 10px;
 		}
 		td:first-child{
 			width: 88%;
 			font-weight: bold;
-			background-color: green;
+			background-color: rgba(255,255,255,0.7);
+			color: rgba(255,0,255,0.7);
 		}
 		td.time{
 			 width: 12%;
 			 font-size: 13px;
 			 color: #9f9d9d;
-			 background: yellow;
+			 background: rgba(0,0,0,0.7);
+			 color: rgba(100,255,100,0.7);
+		}
+		a:first-child{
+			color: rgba(100,255,100,0.7);
+		}
+		a{
+			margin-left: 0px;
+			transition: all 1s easy 0.5s;
+		}
+		a:hover{
+			color: rgba(0,0,0,0.7);
+			/*transform: rotate(720deg);*/
+			margin-left: 50px;
+			transition: all 1s easy 0.5s;
 		}
 		/*.time{
 			 width: 12%;
@@ -85,23 +103,40 @@
 				<tbody>
 					<tr>
 						<td>
-							[<a href="#?id=37" title="曾经的第二大民营钢铁公司就这样垮了" target="_blank">矿业界</a>]
-							<a href="#?id=5134"   title="曾经的第二大民营钢铁公司就这样垮了" target="_blank">曾经的第二大民营钢铁公司就这样垮了</a>
+							[<a href="#" title="[矿业界]" target="_blank">矿业界</a>]
+							<a href="#" title="[矿业界]" target="_blank">曾经的第二大民营钢铁公司就这样垮了</a>
 						</td>
 						<td class="time">2015/9/29</td>
 					</tr>
 					<tr>
-						<td></td>
-						<td></td>
+						<td>
+							[<a href="#" title="[草堂心语]" target="_blank">草堂心语</a>]
+							<a href="#" title="[草堂心语]" target="_blank">草堂君:既然NASA找到了火星有液态水的证...</a>
+						</td>
+						<td class="time">2015/9/29</td>
 					</tr>
 					<tr>
-						<td></td>
-						<td></td>
+						<td>
+							[<a href="#" title="[科学之家]" target="_blank">科学之家</a>]
+							<a href="#" title="[科学之家]" target="_blank">学术圈日报:健康防晒新方法——纳米粒子防晒霜</a>
+						</td>
+						<td class="time">2015/9/29</td>
+					</tr>
+					<tr>
+						<td>
+							[<a href="#" title="[语言风]" target="_blank">语言风</a>]
+							<a href="#" title="[语言风]" target="_blank">小诗二则</a>
+						</td>
+						<td class="time">2015/9/29</td>
 					</tr>
 				</tbody>
 				<tfoot>foot</tfoot>
 			</table>
 		</div>
 	</div>
+	<!-- 
+		table>tr>div>table 
+		表格布局，div,table 互相嵌套
+	-->
 </body>
 </html>
