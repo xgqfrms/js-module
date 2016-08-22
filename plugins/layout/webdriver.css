@@ -1,0 +1,122 @@
+*{ margin:0 auto; padding:0px;}
+div{ margin:0 auto; font-family:"微软雅黑"; font-size:14px; line-height:24px;}
+.head{ width:100%; height:90px; background:#EFEFEF;}
+.topnav{ width:960px; height:90px;}
+.topnav a:link{ color:#111010; text-decoration:none;}
+.topnav a:visited{ color:#111010;}
+.topnav a:hover{ color:#045BC3;}
+
+.logo{ width:150px; height:80px; float:left;}
+.logoright{ float:right; line-height:24px; text-align:right; width:680px; height:auto; font-size:0.8em;}
+.rightnavtop{height:24px; line-height:24px; margin-right:0px; overflow:hidden; clear:both; float:right; margin-top:10px;}
+.rightnavtop ul{ width:210px; height:30px; margin:0px;}
+.rightnav{float:right;}
+.rightnav ul{ width:630px; height:24px; margin:0px;}
+.logoright li{ width:100px; float:left; list-style:none; border-right: 1px solid #333333; line-height:15px; text-align:center; font-size:1em;}
+.logoright .last{ border:0px;}
+.banner{ width:100%; height:auto; background:url(../img/webdriver_02.jpg); color:#FFFFFF;}
+.pic{ width:1003px; height:331px;}
+.banner h1{ width:1000px; height:30px;}
+.banner p{ width:1000px; height:auto; margin:10px auto;}
+
+.nav{ width:100%; height:50px; background:#00597A;}
+.nav ul{ width:1003px; height:50px;}
+.nav ul li{ width:90px; height:50px; float:left; list-style:none; line-height:50px; font-size:14px; text-align:center; }
+.nav a{ display:block; width:90px; height:50px;}
+.nav a:link{ color:#D4D4D4; text-decoration:none;}
+.nav a:visited{ color:#D4D4D4;}
+.nav a:hover{ color:#FFFFFF; background:#003C52;}
+
+.con_pk{ width:1003px; height:700px; margin:35px auto;}
+.con_pk h1{ color:#4ca5d4; margin:10px auto;}
+.con_pk h2{ margin:10px auto; color:#434343;}
+.con_pk ul{ color:#222222; margin-top:20px; width:500px; height:auto; float:left;}
+.con_pk li{ list-style:none; color:#606060;}
+.pk{ width:900px; height:185px; float:left; margin-top:50px;}
+
+.pk_left{ 
+    width:191px; 
+    height:185px; 
+    background:url(../img/bj1.png); 
+    float:left; 
+    margin:20px 80px; 
+    border-radius:10px; 
+    color:#FFFFFF; 
+    text-align:center; 
+    line-height:30px; 
+    font-size:18px;
+}
+
+.pk_left:hover{
+    transform:rotate(360deg) scale(1.2);
+    /*-ms-transform:rotate(360deg) scale(1.2);
+    -webkit-transform:rotate(360deg) scale(1.2);
+    -o-transform:rotate(360deg) scale(1.2);
+    -moz-transform:rotate(360deg) scale(1.2);*/
+	transition: 0.8s ease;
+    /*-webkit-transition: 0.8s ease;
+    -o-transition: 0.8s ease;
+    -moz-transition: 0.8s ease;
+    -ms-transition: 0.8s ease;*/
+}
+	
+.pk a{
+    width:190px; 
+    height:100px; 
+    display:block; 
+    color:#FFFFFF;
+}
+.pk_right{ 
+    width:191px; 
+    height:185px; 
+    background:url(../img/bj2.png); 
+    float:left; margin:20px 20px; 
+    border-radius:10px; 
+    color:#FFFFFF; 
+    text-align:center;
+    line-height:30px;
+    font-size:18px;}
+.pk_right:hover{
+    transform:rotate(360deg) scale(1.2);
+   /* -ms-transform:rotate(360deg) scale(1.2);
+    -webkit-transform:rotate(360deg) scale(1.2);
+    -o-transform:rotate(360deg) scale(1.2);
+    -moz-transform:rotate(360deg) scale(1.2);*/
+	transition: 0.8s ease;
+   /* -webkit-transition: 0.8s ease;
+    -o-transition: 0.8s ease;
+    -moz-transition: 0.8s ease;*/
+    -ms-transition: 0.8s ease;
+}
+.pk_middle{ 
+    width:250px; 
+    height:180px; 
+    float:left; 
+    margin-left:20px; 
+    margin-top:50px;
+}
+
+
+.con_page{ width:100%; height:auto; background:#e0ab1e;}
+.page{ width:1003px; height:300px;}
+.page h1{ margin:10px auto; color:#FFFFFF;}
+.page ul{ width:460px; height:auto; float:left; margin:30px 20px;}
+.page li{ list-style:none; line-height:24px; margin:20px auto;}
+
+.con_link{ width:1003px; height:550px;}
+.con_link a:link{ color:#000000; text-decoration:none;}
+.con_link a:visited{ color:#000000;}
+.con_link a:hover{ color:#03F;}
+.con_left{ width:480px; height:550px; float:left;}
+.con_right{ width:480px; height:550px; float:left; margin-left:30px;}
+.con_link ul{ margin-top:20px;}
+.con_link li{ list-style:none;}
+.con_link b{ font-size:16px; color:#7B00B1;}
+.pinlun{ width:1000px;}
+.foot a:link{ color:#000000; text-decoration:none;}
+.foot a:visited{ color:#000000;}
+.foot a:hover{ color:#000000;}
+
+
+
+

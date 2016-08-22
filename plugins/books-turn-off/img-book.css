@@ -1,0 +1,393 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+.bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.bg img,
+.bg .bg-cover {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.bg .bg-cover {
+  background: #000;
+  opacity: 0;
+  filter: alpha(opacity=30);
+}
+.logo-line {
+  height: 10%;
+  width: 800px;
+  margin: 0 auto 0;
+  -webkit-transition: width 0.5s ease-in 0.1s;
+  transition: width 0.5s ease-in 0.1s;
+  overflow: hidden;
+  position: relative;
+}
+.logo-line.opened {
+  width: 90%;
+}
+.logo-line > div,
+.logo-line > a {
+  background: url(../img/book-logo.png) no-repeat;
+  width: 230px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+}
+.logo-line .logo-left {
+  background: url(../img/logo-left.png) no-repeat center;
+  background-size: contain;
+  left: 0;
+}
+.logo-line .logo-right {
+  background: url(../img/logo-right.png) no-repeat center;
+  background-size: 80%;
+  right: 0;
+}
+.cover {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.cover > div {
+  width: 100%;
+  height: 720px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.cover .cover-info {
+  top: -100%;
+  height: 100%;
+  color: #fff;
+  text-align: center;
+  background: #554b46;
+  filter: alpha(opacity=90);
+  background: rgba(85, 75, 70, 0.8);
+  font-family: arial, 'Microsoft Yahei', '微软雅黑', Tahoma, Arial, Helvetica, STHeiti;
+}
+.cover .cover-info h2 {
+  width: 600px;
+  margin: 8% auto 5%;
+  font: normal 32px/80px arial, 'Microsoft Yahei', '微软雅黑', Tahoma, Arial, Helvetica, STHeiti;
+  border: 2px solid #fff;
+  border-left: 0;
+  border-right: 0;
+}
+.cover .cover-info p {
+  width: 600px;
+  margin: 0 auto 5%;
+  font: normal 20px/2 arial, 'Microsoft Yahei', '微软雅黑', Tahoma, Arial, Helvetica, STHeiti;
+  text-align: left;
+  text-indent: 2em;
+}
+.cover .cover-info .begin {
+  text-decoration: none;
+  color: #fff;
+  display: inline-block;
+  width: 200px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 20px;
+  border: 2px solid #fff;
+  font-size: 16px;
+}
+.cover .cover-info .begin:hover {
+  background: #fff;
+  color: #554b46;
+  font-weight: bold;
+}
+.cover img {
+  position: absolute;
+  display: none;
+  width: 240px;
+  margin-left: -150px;
+  border: 10px solid #fff;
+  border-bottom: 30px solid #fff;
+  background-color: #fff;
+}
+.book {
+  width: 90%;
+  margin: 0 auto 0;
+  height: 100%;
+  position: relative;
+  z-index: 8;
+  -webkit-perspective: 3000px;
+  perspective: 3000px;
+}
+.book > div {
+  position: absolute;
+  margin: 0;
+}
+.book .page {
+  width: 50%;
+  left: 50%;
+  top: 0;
+  -webkit-transform-style: preserve-3d;
+  -webkit-transform-origin: 0 50%;
+  -webkit-transition: transform .5s;
+  transform-style: preserve-3d;
+  transform-origin: 0 50%;
+  transition: transform .5s;
+}
+.book .page > div {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+.book .page > div.front,
+.book .page > div.back {
+  position: absolute;
+  backface-visibility: hidden;
+}
+.book .page > div.back {
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+  z-index: 1;
+}
+.book .page > div h2 {
+  width: 80%;
+  margin: 12% auto 40px;
+  font: normal 36px/1.5 arial, 'Microsoft Yahei', '微软雅黑', Tahoma, Arial, Helvetica, STHeiti;
+  padding: 10px 0;
+  border: 1px solid #fff;
+  border-left: 0;
+  border-right: 0;
+  color: #fff;
+}
+.book .page > div h2 a {
+  color: #fff;
+}
+.book .page > div p {
+  width: 80%;
+  margin: 0 auto 1em;
+  font: 200 20px/1.8 arial, 'Microsoft Yahei', '微软雅黑', Tahoma, Arial, Helvetica, STHeiti;
+  color: #fff;
+  text-indent: 2em;
+}
+.book .page > div h2 {
+  font-size: 24px \9;
+  margin: 40px auto 20px \9;
+}
+.book .page > div p {
+  font-size: 14px \9;
+}
+.book .page > div .inner {
+  width: 100%;
+}
+.book .page.pagey {
+  height: 100%;
+  width: 100%;
+  left: 0;
+}
+.book .page-info {
+  background: url("img/shadow.png") repeat-y 360px 0 #0066ff;
+  width: 100%;
+  height: 100%;
+}
+.book .page-imgs {
+  z-index: -1;
+  height: 100%;
+  text-align: center;
+}
+.book .page-imgs .img {
+  max-width: 80%;
+  min-width: 60%;
+  min-height: 30%;
+  margin-top: 10%;
+  z-index: 0;
+  position: relative;
+}
+.book .page-imgs .bg-mask,
+.book .page-imgs .bg-pic {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: #fff;
+}
+.book .page-imgs .bg-mask {
+  background: url("img/shadow.png") repeat-y -540px 0 #ffffff;
+}
+.book .page-imgs .bg-pic + .bg-mask {
+  filter: alpha(opacity=85);
+  opacity: .85;
+}
+.book .current {
+  z-index: 2;
+}
+.book .current .front {
+  z-index: 1;
+}
+.book .current + .page {
+  z-index: 1;
+}
+.book .current + .page .back {
+  z-index: -1;
+}
+.book .current .page-imgs {
+  z-index: 1;
+}
+/*webkit下面使用内容居中*/
+.ks-webkit .book .page > div {
+  /* Safari, Chrome, and Opera */
+  display: -webkit-box;
+  -webkit-box-pack: center;
+  -webkit-box-align: center;
+}
+.ks-webkit .book .page > div .inner {
+  padding-bottom: 20px;
+}
+.ks-webkit .book .page > div h2,
+.ks-webkit .book .page > div .img {
+  margin-top: 0;
+}
+.turn-off {
+  -webkit-transform: rotateY(0);
+  transform: rotateY(0);
+}
+.turn-on {
+  -webkit-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
+}
+.foot {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  font-family: arial, 'Microsoft Yahei', '微软雅黑', Tahoma, Arial, Helvetica, STHeiti;
+  color: #bbb1ac;
+  height: 40px;
+  line-height: 40px;
+}
+.loading {
+  background: #666;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 5000;
+  left: 0;
+  top: 0;
+}
+.loading .process-bar {
+  width: 300px;
+  height: 28px;
+  border: 1px solid #ccc;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -150px;
+  margin-top: -10px;
+}
+.loading .process-bar .bar-inner {
+  height: 100%;
+  width: 0;
+  background: #554b46;
+  color: #fff;
+  font: bold 14px/2 arial, 'Microsoft Yahei', '微软雅黑', Tahoma, Arial, Helvetica, STHeiti;
+  text-indent: 1em;
+  overflow: visible;
+  white-space: nowrap;
+}
+.static-btn {
+  position: absolute;
+  top: 50%;
+  margin-top: -20px;
+  width: 40px;
+  height: 40px;
+  background: url(../img/icons.png) no-repeat;
+  text-indent: -9999em;
+  display: none;
+}
+.static-btn.btn-prev {
+  left: 1%;
+  background-position: 0 -1px;
+}
+.static-btn.btn-next {
+  right: 1%;
+  background-position: 0 -61px;
+}
+.container {
+  width: 90%;
+  height: 100%;
+  left: 5%;
+  top: 91px;
+  overflow: hidden;
+  position: absolute;
+  display: none;
+  background: none;
+  *top: 96px;
+  *z-index: 10;
+}
+.container .lmBox {
+  top: 10%;
+}
+@media screen and (max-width: 1400px) {
+  .book .page > div h2 {
+    font-size: 28px;
+  }
+  .book .page > div p {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .book .page > div h2 {
+    font-size: 24px;
+  }
+  .book .page > div p {
+    font-size: 16px;
+  }
+  .social {
+    right: 10px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .book .page > div h2 {
+    font-size: 20px;
+  }
+  .book .page > div p {
+    font-size: 14px;
+  }
+  .static-btn {
+    display: none;
+  }
+  .book,
+  .container {
+    width: 100%;
+    left: 0;
+  }
+  .social {
+    right: 0;
+  }
+}
+/**webkit滚动条样式*/
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  visibility: hidden;
+}
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.2);
+}
+/**webkit滚动条样式 结束*/

@@ -3,6 +3,177 @@
 <head>
 	<meta charset="UTF-8">
 	<title>PK</title>
+	<!-- http://www.51testing.com/zhuanti/webdriver.htm -->
+	<!-- <link rel="stylesheet" href="./webdriver.css"> -->
+	<style>
+	    * {
+	        margin: 0 auto;
+	        padding: 0px;
+	    }
+	    body{
+	    	width: 100%;
+	    	height: 700px;
+	    }
+	    div {
+	        margin: 0 auto;
+	        font-family: "微软雅黑";
+	        font-size: 14px;
+	        line-height: 24px;
+	    }
+		.pk_left {
+		    width: 191px;
+		    height: 185px;
+		    background: url(./img/left.png);
+		    float: left;
+		    margin: 20px 80px;
+		    border-radius: 10px;
+		    color: #FFFFFF;
+		    text-align: center;
+		    line-height: 30px;
+		    font-size: 18px;
+		}
+		.pk_right {
+		    width: 191px;
+		    height: 185px;
+		    background: url(./img/right.png);
+		    float: left;
+		    margin: 20px 20px;
+		    border-radius: 10px;
+		    color: #FFFFFF;
+		    text-align: center;
+		    line-height: 30px;
+		    font-size: 18px;
+		}
+		.pk_left:hover{
+		    transform:rotate(360deg) scale(1.2);
+		    /*-ms-transform:rotate(360deg) scale(1.2);
+		    -webkit-transform:rotate(360deg) scale(1.2);
+		    -o-transform:rotate(360deg) scale(1.2);
+		    -moz-transform:rotate(360deg) scale(1.2);*/
+			transition: 0.8s ease;
+		    /*-webkit-transition: 0.8s ease;
+		    -o-transition: 0.8s ease;
+		    -moz-transition: 0.8s ease;
+		    -ms-transition: 0.8s ease;*/
+		}
+		.pk_right:hover{
+		    transform:rotate(360deg) scale(1.2);
+		   /* -ms-transform:rotate(360deg) scale(1.2);
+		    -webkit-transform:rotate(360deg) scale(1.2);
+		    -o-transform:rotate(360deg) scale(1.2);
+		    -moz-transform:rotate(360deg) scale(1.2);*/
+			transition: 0.8s ease;
+		   /* -webkit-transition: 0.8s ease;
+		    -o-transition: 0.8s ease;
+		    -moz-transition: 0.8s ease;
+		    -ms-transition: 0.8s ease;*/
+		}
+		.pk_middle {
+		    width: 250px;
+		    height: 180px;
+		    float: left;
+		    margin-left: 20px;
+		    margin-top: 50px;
+		}
+		.pk a{
+			width:190px; 
+			height:100px; 
+			display:block; 
+			color:#FFFFFF;
+			text-decoration: none;
+		}
+		.pk a:hover{
+			/*text-decoration: blink;*/
+			text-decoration: overline;
+			text-decoration: underline;
+			/* overwriter 覆盖*/
+			/*underline and overline.*/
+		}
+		.tp{
+			background-color: rgba(0,255,0,0.7);
+			display: block;
+			width: 100px;
+		    height: 100px;
+		    clear: both;
+		    float: left;
+		    border-radius: 25%;
+		    text-align: center;
+		    vertical-align: middle;
+		}
+		.tp:hover{
+			transform:rotate(360deg) scale(2) ;
+			transition: all 1s ease 0.1s;
+			margin-top: 50px;
+			background-color: rgba(255,0,255,0.7);
+			/*display: none;*/
+		}
+		.fly{
+			background-color: rgba(255,0,0,0.7);
+			display: block;
+			width: 100px;
+		    height: 100px;
+		    float: left;
+		    border-radius: 50%;
+		    text-align: center;
+		    vertical-align: middle;
+		    box-sizing: border-box;
+		    /* 和 position 组合使用 top & right 才能生效 */
+		    /*position: relative;*/
+		    clear: both;
+		    float: left;
+		    top: 100px;
+		    margin-left: 100px;
+		}
+		.fly:hover{
+			transform:rotate(360deg) scale(3) ;
+			transition: all 2s ease 0.1s;
+			margin-left: 300px;
+			background-color: rgba(255,0,255,0.7);
+		    /*z-index: 9999;*/
+		    /*border: 1px solid rgba(0,255,255,0.7);*/
+		}
+		span{
+			text-align: center;
+			/*vertical-align: middle;*/
+			color: #fff;
+			padding-top: 25px;
+			display: block;
+			height: 50px;
+			line-height: 50px;
+		}
+		.big{
+			background-color: rgba(255,255,0,0.7);
+			display: block;
+			width: 100px;
+		    height: 100px;
+		    clear: both;
+		    float: left;
+		    /*border-radius: 50%;*/
+		    text-align: center;
+		    vertical-align: middle;
+		    box-sizing: border-box;
+		}
+		.big:hover{
+			background-color: rgba(255,0,255,0.7);
+			width: 800px;
+		    height: 300px;
+		    border: 10px solid #f00;
+		    /*transform:rotate(360deg) scale(3) ;*/
+			transition: all 2s ease 0.1s;
+		}
+		pre{
+			color: #0f0;
+			font-size: 32px;
+			background: #000;
+		}
+		.pre{
+			/*display: block;*/
+			width: 200px;
+			height: 200px;
+			margin: 0px;
+			clear: both;
+		}
+	</style>
 </head>
 <body>
 	<div>
@@ -15,7 +186,7 @@
 					</a>
 				</div>
 				<div class="pk_middle">
-					<img src="img/webdriver_09.jpg">
+					<img src="./img/pk.png">
 				</div>
 				<div class="pk_right">
 					<br><br>
@@ -23,6 +194,20 @@
 						<b>Webdriver<br>构建测试工程</b>
 					</a>
 				</div>
+			</div>
+		</div>
+		<div>
+			<p class="tp">transform:</p>
+		</div>
+		<div>
+			<div class="fly">
+				<span>xgqfrms.xyz</span>
+			</div>
+			<div class="big">
+				<span>xgqfrms.xyz</span>
+			</div>
+			<div class="pre">
+				<pre>xxxxxxxxxx</pre>
 			</div>
 		</div>
 	</div>
