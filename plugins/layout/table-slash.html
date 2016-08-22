@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>table_slash</title>
+	<!-- http://weixin.sciencenet.cn/ -->
+	<style>
+		*{
+			text-decoration: none;
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		.box{
+			width: 700px;
+			height: 500px;
+			margin: 0 auto;
+			border: 1px solid red;
+		}
+		.flist td {
+		    height: 40px;
+		    /*border-bottom: 1px dashed #CCC;*/
+		    border-bottom: 1px dashed rgba(255,0,255,0.7);
+		    background: rgba(0,0,0,0.3);
+		}
+		table{
+			/*border-collapse: separate;
+			border-spacing: 2px;
+			border-color: grey;*/
+			/*display: table; 497x128*/
+			/*display: block; 698x128*/
+			display: block;
+			border-spacing: 0;
+		}
+		tbody {
+		    /*display: table-row-group; 497x128*/
+		    /*vertical-align: middle;
+		    border-color: inherit;*/
+		    display: block;
+		}
+		tr{
+			/*display: table-row;*/
+		    /*vertical-align: inherit;
+		    border-color: inherit;*/
+			width: 100%;
+			display: block;
+		}
+		td, th {
+		    /*display: table-cell;
+		    vertical-align: inherit;*/
+		    display: block;
+		    float: left;
+		    text-align: center;
+		    vertical-align: middle;
+		}
+		td:first-child{
+			width: 88%;
+			font-weight: bold;
+			background-color: green;
+		}
+		td.time{
+			 width: 12%;
+			 font-size: 13px;
+			 color: #9f9d9d;
+			 background: yellow;
+		}
+		/*.time{
+			 width: 12%;
+			 font-size: 13px;
+			 color: #9f9d9d;
+			 background: yellow;
+		}*/
+		/*
+			td > .time
+		    CSS优先级 元素.类 > 元素 > 类
+		    E.class > E > .class
+		*/
+	</style>
+</head>
+<body>
+	<div class="box">
+		<div class="flist">
+			<table>
+				<thead>head</thead>
+				<tbody>
+					<tr>
+						<td>
+							[<a href="#?id=37" title="曾经的第二大民营钢铁公司就这样垮了" target="_blank">矿业界</a>]
+							<a href="#?id=5134"   title="曾经的第二大民营钢铁公司就这样垮了" target="_blank">曾经的第二大民营钢铁公司就这样垮了</a>
+						</td>
+						<td class="time">2015/9/29</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+					</tr>
+				</tbody>
+				<tfoot>foot</tfoot>
+			</table>
+		</div>
+	</div>
+</body>
+</html>
