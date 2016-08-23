@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>fontello</title>
+</head>
+<body>
+	<div>
+		<div>
+			<div>
+				<pre>
+					<h1>自定义web字体： @font-face : font-family, src: url()format(),ont-weight, font-style</h1>
+					@font-face {
+					    font-family: 'fontello';
+					    src: url('../font/fontello.eot?29672429');
+					    src: url('../font/fontello.eot?29672429#iefix') format('embedded-opentype'),
+					         url('../font/fontello.woff?29672429') format('woff'),
+					         url('../font/fontello.ttf?29672429') format('truetype'),
+					         url('../font/fontello.svg?29672429#fontello') format('svg');
+					    font-weight: normal;
+					    font-style: normal;
+					}
+				</pre>
+				<hr>
+				<pre>
+					<h1>CSS3 高级选择器：[class^="icon-"]:before, [class*=" icon-"]:before </h1>
+					[class^="icon-"]:before, [class*=" icon-"]:before {
+						font-family: "fontello";
+						font-style: normal;
+						font-weight: normal;
+						speak: none;
+					}
+				</pre>
+				<hr>
+				<pre>
+					<h1>iocn-font 图标字体：icon-font: .class</h1>
+					.icon-glass:before { content: '\e800'; } /* '' */
+					.icon-music:before { content: '\e801'; } /* '' */
+					.icon-search:before { content: '\e802'; } /* '' */
+					.icon-mail:before { content: '\e803'; } /* '' */
+					.icon-retweet:before { content: '\e847'; } /* '' */
+					.icon-keyboard:before { content: '\e848'; } /* '' */
+					.icon-gamepad:before { content: '\e849'; } /* '' */
+					.icon-comment:before { content: '\e84a'; } /* '' */
+					.icon-chat:before { content: '\e84b'; } /* '' */
+				</pre>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
