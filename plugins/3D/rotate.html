@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>rotate</title>
+	<!-- http://2016.html5dw.com/beijing -->
+	<style>		
+		@keyframes liuhed {
+		    0% {
+		        transform: rotate(0deg);
+		        -ms-transform: rotate(0deg);
+		        /* IE 9 */
+		        -moz-transform: rotate(0deg);
+		        /* Firefox */
+		        -webkit-transform: rotate(0deg);
+		        /* Safari å’Œ Chrome */
+		        -o-transform: rotate(0deg);
+		    }
+		    100% {
+		        transform: rotate(360deg);
+		        -ms-transform: rotate(360deg);
+		        /* IE 9 */
+		        -moz-transform: rotate(360deg);
+		        /* Firefox */
+		        -webkit-transform: rotate(360deg);
+		        /* Safari å’Œ Chrome */
+		        -o-transform: rotate(360deg);
+		    }
+		}
+		#beijing #schedule .center .menu-right .zhuan-round {
+		    position: relative;
+		    top: 50%;
+		    left: 50%;
+		    margin-top: -125px;
+		    margin-left: -125px;
+		    animation: liuhed 2s linear infinite;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<div>
+			<div>
+				<h1></h1>
+				<div class="menu menu-right">
+			        <div class="menu-round">
+			            <img class="zhuan-round" src="./images/zhuan.png" alt="">
+			        </div>
+			        <div class="menu-round-box">
+			            <img data-id="main" class="img1" src="/static/images/beijing/01.png" alt="">
+			            <img data-id="toolOne" class="img img2" src="/static/images/beijing/02.png" alt="">
+			            <img data-id="toolTwo" class="img img3" src="/static/images/beijing/03.png" alt="">
+			            <img data-id="gameOne" class="img img4" src="/static/images/beijing/04.png" alt="">
+			            <img data-id="gameTwo" class="img img5" src="/static/images/beijing/05.png" alt="">
+			            <img data-id="marketing" class="img img6" src="/static/images/beijing/06.png" alt="">
+			            <img data-id="carnival" class="img img7 " id="carnival" src="/static/images/beijing/07.png" alt="">
+			        </div>
+		      </div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
