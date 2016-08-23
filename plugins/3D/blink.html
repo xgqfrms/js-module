@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>blink</title>
+	<!-- https://bocoup.com/weblog/dive-into-flexbox -->
+	<link rel="stylesheet" href="xstyle.css">
+	<style>
+		@media (min-width: 35em)
+		.site-nav>.nav-item {
+		    border: none;
+		    clear: both;
+		    display: table-cell;
+		    padding-bottom: .5em;
+		    position: relative;
+		    width: 20%;
+		}
+		.site-nav .nav-item, .site-nav a {
+		    display: block;
+		}
+		.nav-item {
+		    display: inline;
+		    padding: 0;
+		    position: relative;
+		    margin: 0;
+		}
+		a.menu-item-has-children:after {
+		    content: "\25BC";
+		    display: inline-block;
+		    position: relative;
+		    bottom: 1px;
+		    transform: translateY(0);
+		    margin: 0 0 0 .75em;
+		    font-size: 9px;
+		}
+		.site-nav a {
+		    background: #fff;
+		    border: rgba(130,130,130,.3) solid;
+		    border-width: 1px;
+		    color: #626262;
+		    font-weight: 600;
+		    margin-bottom: -1px;
+		    padding: .7em 1em .6em;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<div>
+			<nav class="site-nav" role="navigation">
+				<span class="nav-item" role="presentation">
+					<a href="https://bocoup.com/work" role="menuitem">Work</a>
+				</span>	
+				<span class="nav-item" role="presentation">
+					<a href="https://bocoup.com/services" class="menu-item-has-children" role="menuitem">Services</a>
+					<div class="sub-menu">
+						<span class="nav-item" role="presentation">
+							<a href="https://bocoup.com/services/datavis" role="menuitem">Data Visualization</a>
+						</span>
+						<span class="nav-item" role="presentation">
+							<a href="https://bocoup.com/services/deployment" role="menuitem">Deployment</a>
+						</span>
+						<span class="nav-item" role="presentation">
+							<a href="https://bocoup.com/services/design" role="menuitem">Design</a>
+						</span>
+						<span class="nav-item" role="presentation">
+							<a href="https://bocoup.com/services/training" role="menuitem">Training</a>
+						</span>
+						<span class="nav-item" role="presentation">
+							<a href="https://bocoup.com/services/web-applications" role="menuitem">Web Applications</a>
+						</span>
+						<span class="nav-item" role="presentation">
+							<a href="https://bocoup.com/services/web-connected-devices" role="menuitem">Web Connected Devices</a>
+						</span>
+					</div>
+				</span>			
+				<span class="nav-item" role="presentation">
+				<a href="https://bocoup.com/services/open-source" role="menuitem">Open Source</a>
+				</span>
+				<span class="nav-item" role="presentation">
+					<a href="https://bocoup.com/about" role="menuitem">About</a>
+				</span>
+				<span class="nav-item" role="presentation">
+					<a href="https://bocoup.com/weblog" class="current_page_parent" role="menuitem">Blog</a>
+				</span>
+			</nav>
+		</div>
+		<!-- https://www.google.com.hk/%7C/http://xgqfrms.xyz/ -->
+		<!-- http://xgqfrms.xyz/%7C/http:/https://www.google.com.hk -->
+	</div>
+</body>
+</html>
