@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ES6标准参考教程</title>
+</head>
+<body>
+    <p>redirecting...</p>
+	<h1>重定向到https://xgqfrms.github.io/DataStructure/</h1>
+	<h1>正则表达式：转义字符 </h1>
+	<span>/https:\/\/xgqfrms\.github\.io\/DataStructure\/([^#]+)#(.+)/</span>
+    <script>
+      var loc = 'https://xgqfrms.github.io/DataStructure/';
+      var regex = /https:\/\/xgqfrms\.github\.io\/DataStructure/;
+      var result = regex.exec(window.location);
+      if (result) {
+        window.location = loc + '/#docs/' + result[1] + '#' + result[2];
+      } else {
+        window.location = loc;
+      }
+    </script>
+</body>
+</html>
