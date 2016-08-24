@@ -3,18 +3,91 @@
 <head>
 	<meta charset="UTF-8">
 	<title>typed.js</title>
+	<link rel="stylesheet" href="tmain.css">
+	 <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.css">
 	<!-- http://market.ionic.io/ -->
+	<!-- http://www.mattboldt.com/demos/typed-js/ -->
 	<style>
 		/**/
 	</style>
 </head>
 <body>
 	<div>
-		<div>
-			<div>
-				<h1></h1>
+		<div class="text-editor-wrap">
+			<div class="title-bar">
+				<span class="title">typed.js — bash — 80x
+					<span class="terminal-height">10</span>
+				</span>
+			</div>
+			<div class="text-body">
+				$ <span id="typed"></span>
+				<br>
+				<!-- <span class="typed-cursor">|</span> -->
 			</div>
 		</div>
+	</div>
+	<script src="https://raw.githubusercontent.com/xgqfrms/cdn/master/jquery/jquery-3.1.0.js"></script>
+	<script src="typed.js"></script>
+	<script>
+		$(function(){
+
+				$("#typed").typed({
+					strings: ["Typed.js is a jQuery plugin.", "It tyops out", "It types out sentences.", "And then deletes them.", "Try it out!"],
+					typeSpeed: 30,
+		      callback: function(){
+		        shift();
+		      }
+				});
+
+			});
+		// 
+		function shift(){
+		      $(".head-wrap").addClass("shift-text");
+		      terminalHeight();
+		  }
+
+		  function terminalHeight(){
+		      var termHeight = $(".terminal-height");
+		      var value = termHeight.text();
+		      value = parseInt(value);
+		      setTimeout(function(){
+		          if (value > 10){
+		              value = value-1;
+		              this.txtValue = value.toString();
+		              termHeight.text(this.txtValue);
+		              self.terminalHeight();
+		          }
+		          else{
+		              clearTimeout();
+		          }
+		      }, 10);
+		  }
+	</script>
+	<div>
+	    <!-- http://www.cardinfolink.com/about.html -->
+		<section id="team">
+		    <div class="employees" style="height: 450px;">
+				<div class="team" style="display: block;">
+					<div class="people current" data-left="3836" style="left: 3836px; width: 1918px; transform: translateX(-4919.8px);">
+						<div class="employee" style="width: 59px; height: 59px; left: 501.5px; top: 245.5px; display: none; transform: translate3d(47.15px, 1.11px, 0px) scale(0.064192);">
+							<a class="circle" style="background-image: url(&quot;../img/about/team/kathyye.jpg&quot;);"></a>
+						</div>
+						<div class="employee" style="width: 44px; height: 44px; left: 504px; top: 31px; display: none; transform: translate3d(47.63px, -0.45px, 0px) scale(0.080673);">
+							<a class="circle" style="background-image: url(&quot;../img/about/team/kayliu.jpg&quot;);"></a>
+						</div>
+						<div class="employee" style="width: 66px; height: 66px; left: 327px; top: 188px; transform: translate3d(50.53px, 4.26px, 0px) scale(0.071523); display: none;">
+							<a class="circle" style="background-image: url(&quot;../img/about/team/jessieshu.jpg&quot;);"></a>
+						</div>
+						<div class="inter">
+							<div class="abc"></div>
+						</div>
+					</div>
+				</div> 
+				<div class="search" style="display:none;">
+					<input type="text" placeholder="Search">
+				</div>
+		    </div>
+		</section>
 	</div>
 </body>
 </html>

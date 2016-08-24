@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>type</title>
+	<!-- http://www.mattboldt.com/demos/typed-js/ -->
+	<style>
+		.typed-cursor{
+		    opacity: 1;
+		    -webkit-animation: blink 0.7s infinite;
+		    -moz-animation: blink 0.7s infinite;
+		    animation: xblink 0.7s infinite;
+		}
+		@keyframes xblink{
+		    0% { opacity:1; }
+		    50% { opacity:0; }
+		    100% { opacity:1; }
+		}
+		@-webkit-keyframes xblink{
+		    0% { opacity:1; }
+		    50% { opacity:0; }
+		    100% { opacity:1; }
+		}
+		@-moz-keyframes xblink{
+		    0% { opacity:1; }
+		    50% { opacity:0; }
+		    100% { opacity:1; }
+		}
+		.type-bg{
+			width: 300px;
+			height: 200px;
+			margin: 0 auto;
+			background: rgba(0,0,0,1);
+			color: rgba(0,255,0,1);
+			box-sizing: border-box;
+		}
+		.type-bg span{
+			margin: 5px;
+			text-align: center;
+			display: inline-block;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<div class="type-bg">
+			<span>xgqfrms,</span>
+			<span class="element"></span>
+			<span class="typed-cursor"></span>
+		</div>		
+		<!-- <script src="https://cdn.jsdelivr.net/jquery/3.1.0/jquery.min.js"></script> -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+		<script src="typed.min.js"></script>
+		<script>
+		  $(function(){
+		      $(".element").typed({
+		        // strings: ["First sentence.", "Second sentence."],
+		        strings: ["These are the default values...", "You know what you should do?", "Use your own!", "Have a great day!"],
+		        typeSpeed: 0,
+		        loop: true,
+		      });
+		  });
+		</script>
+		<!-- 
+			// default
+			strings: ["These are the default values...", "You know what you should do?", "Use your own!", "Have a great day!"],
+			stringsElement: null,
+			// typing speed
+			typeSpeed: 0,
+			// time before typing starts
+			startDelay: 0,
+			// backspacing speed
+			backSpeed: 0,
+			// shuffle the strings
+			shuffle: false,
+			// time before backspacing
+			backDelay: 500,
+			// loop
+			loop: true,
+			// false = infinite
+			loopCount: false,
+			// show cursor
+			showCursor: true,
+			// character for cursor
+			cursorChar: "|",
+			// attribute to type (null == text)
+			attr: null,
+			// either html or text
+			contentType: 'html',
+			// call when done callback function
+			callback: function() {},
+			// starting callback function before each string
+			preStringTyped: function() {},
+			//callback for every typed string
+			onStringTyped: function() {},
+			// callback for reset
+			resetCallback: function() {}
+		 -->
+	</div>
+</body>
+</html>
