@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>clock</title>
+	<script type="text/javascript" src="clockp.js"></script>
+	<script type="text/javascript" src="clockh.js"></script> 
+	<style>
+		body{
+			background: rgba(0,0,0,0.7);
+		}
+		.hover{
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<div id="clock_a">
+		<div style="position: relative; margin: auto; width: 82px; height: 82px; overflow: visible;">
+	<!-- num-->
+		<div id="cnum12" style="position: absolute; top: -16px; left: 9px; visibility: visible; width: 32px; height: 32px; font-family: helvetica, arial, sans-serif; font-size: 6.25px; color: rgb(255, 255, 255); text-align: center; padding-top: 10px; z-index: 1000;">
+		<span style="font-size:60%">||</span>
+		</div>
+		<div id="cnum11" style="position: absolute; top: -12.6506px; left: -3.5px; visibility: visible; width: 32px; height: 32px; font-family: helvetica, arial, sans-serif; font-size: 6.25px; color: rgb(255, 255, 255); text-align: center; padding-top: 10px; z-index: 1000;">·</div>
+		<div id="cnum10" style="position: absolute; top: -3.5px; left: -12.6506px; visibility: visible; width: 32px; height: 32px; font-family: helvetica, arial, sans-serif; font-size: 6.25px; color: rgb(255, 255, 255); text-align: center; padding-top: 10px; z-index: 1000;">·</div>
+		<div id="cnum9" style="position: absolute; top: 9px; left: -16px; visibility: visible; width: 32px; height: 32px; font-family: helvetica, arial, sans-serif; font-size: 6.25px; color: rgb(255, 255, 255); text-align: center; padding-top: 10px; z-index: 1000;">-</div>
+		<div id="cnum8" style="position: absolute; top: 21.5px; left: -12.6506px; visibility: visible; width: 32px; height: 32px; font-family: helvetica, arial, sans-serif; font-size: 6.25px; color: rgb(255, 255, 255); text-align: center; padding-top: 10px; z-index: 1000;">·</div>
+		<div id="cnum7" style="position: absolute; top: 30.6506px; left: -3.5px; visibility: visible; width: 32px; height: 32px; font-family: helvetica, arial, sans-serif; font-size: 6.25px; color: rgb(255, 255, 255); text-align: center; padding-top: 10px; z-index: 1000;">·</div>
+		<div id="cnum6" style="position: absolute; top: 34px; left: 9px; visibility: visible; width: 32px; height: 32px; font-family: helvetica, arial, sans-serif; font-size: 6.25px; color: rgb(255, 255, 255); text-align: center; padding-top: 10px; z-index: 1000;">
+		<span style="font-size:60%">|</span></div>
+		<div id="cnum5" style="position: absolute; top: 30.6506px; left: 21.5px; visibility: visible; width: 32px; height: 32px; font-family: helvetica, arial, sans-serif; font-size: 6.25px; color: rgb(255, 255, 255); text-align: center; padding-top: 10px; z-index: 1000;">·</div>
+		<div id="cnum4" style="position: absolute; top: 21.5px; left: 30.6506px; visibility: visible; width: 32px; height: 32px; font-family: helvetica, arial, sans-serif; font-size: 6.25px; color: rgb(255, 255, 255); text-align: center; padding-top: 10px; z-index: 1000;">·</div>
+		<div id="cnum3" style="position: absolute; top: 9px; left: 34px; visibility: visible; width: 32px; height: 32px; font-family: helvetica, arial, sans-serif; font-size: 6.25px; color: rgb(255, 255, 255); text-align: center; padding-top: 10px; z-index: 1000;">-</div>
+		<div id="cnum2" style="position: absolute; top: -3.5px; left: 30.6506px; visibility: visible; width: 32px; height: 32px; font-family: helvetica, arial, sans-serif; font-size: 6.25px; color: rgb(255, 255, 255); text-align: center; padding-top: 10px; z-index: 1000;">·</div>
+		<div id="cnum1" style="position: absolute; top: -12.6506px; left: 21.5px; visibility: visible; width: 32px; height: 32px; font-family: helvetica, arial, sans-serif; font-size: 6.25px; color: rgb(255, 255, 255); text-align: center; padding-top: 10px; z-index: 1000;">·</div>
+	<!-- num end-->
+	<!-- minute -->
+		<div id="cmin22" style="position: absolute; top: 42.7984px; left: 12.0687px; visibility: visible; width: 1px; height: 1px; font-size: 1px; z-index: 997; background-color: rgb(255, 0, 255);"></div>
+		<div id="cmin21" style="position: absolute; top: 41.9894px; left: 12.6565px; visibility: visible; width: 1px; height: 1px; font-size: 1px; z-index: 997; background-color: rgb(255, 0, 255);"></div>
+		<div id="cmin20" style="position: absolute; top: 41.1803px; left: 13.2443px; visibility: visible; width: 1px; height: 1px; font-size: 1px; z-index: 997; background-color: rgb(255, 0, 255);"></div>
+		<div id="cmin19" style="position: absolute; top: 40.3713px; left: 13.8321px; visibility: visible; width: 1px; height: 1px; font-size: 1px; z-index: 997; background-color: rgb(255, 0, 255);"></div>
+		<div id="cmin18" style="position: absolute; top: 39.5623px; left: 14.4199px; visibility: visible; width: 1px; height: 1px; font-size: 1px; z-index: 997; background-color: rgb(255, 0, 255);"></div>
+		<div id="cmin17" style="position: absolute; top: 38.7533px; left: 15.0077px; visibility: visible; width: 1px; height: 1px; font-size: 1px; z-index: 997; background-color: rgb(255, 0, 255);"></div>
+		<div id="cmin16" style="position: absolute; top: 37.9443px; left: 15.5954px; visibility: visible; width: 1px; height: 1px; font-size: 1px; z-index: 997; background-color: rgb(255, 0, 255);"></div>
+		<div id="cmin15" style="position: absolute; top: 37.1353px; left: 16.1832px; visibility: visible; width: 1px; height: 1px; font-size: 1px; z-index: 997; background-color: rgb(255, 0, 255);"></div>
+		<div id="cmin14" style="position: absolute; top: 36.3262px; left: 16.771px; visibility: visible; width: 1px; height: 1px; font-size: 1px; z-index: 997; background-color: rgb(255, 0, 255);"></div>
+		<div id="cmin13" style="position: absolute; top: 35.5172px; left: 17.3588px; visibility: visible; width: 1px; height: 1px; font-size: 1px; z-index: 997; background-color: rgb(255, 0, 255);"></div>
+		<div id="cmin12" style="position: absolute; top: 34.7082px; left: 17.9466px; visibility: visible; width: 1px; height: 1px; font-size: 1px; z-index: 997; background-color: rgb(255, 0, 255);"></div>
+		<div id="cmin11" style="position: absolute; top: 33.8992px; left: 18.5344px; visibility: visible; width: 1px; height: 1px; font-size: 1px; z-index: 997; background-color: rgb(255, 0, 255);"></div>
+		<div id="cmin10" style="position: absolute; top: 33.0902px; left: 19.1221px; visibility: visible; width: 1px; height: 1px; font-size: 1px; z-index: 997; background-color: rgb(255, 0, 255);"></div>
+		<div id="cmin9" style="position: absolute; top: 32.2812px; left: 19.7099px; visibility: visible; width: 1px; height: 1px; font-size: 1px; z-index: 997; background-color: rgb(255, 0, 255);"></div>
+		<div id="cmin8" style="position: absolute; top: 31.4721px; left: 20.2977px; visibility: visible; width: 1px; height: 1px; font-size: 1px; z-index: 997; background-color: rgb(255, 0, 255);"></div>
+		<div id="cmin7" style="position: absolute; top: 30.6631px; left: 20.8855px; visibility: visible; width: 1px; height: 1px; font-size: 1px; z-index: 997; background-color: rgb(255, 0, 255);"></div>
+		<div id="cmin6" style="position: absolute; top: 29.8541px; left: 21.4733px; visibility: visible; width: 1px; height: 1px; font-size: 1px; z-index: 997; background-color: rgb(255, 0, 255);"></div>
+		<div id="cmin5" style="position: absolute; top: 29.0451px; left: 22.0611px; visibility: visible; width: 1px; height: 1px; font-size: 1px; z-index: 997; background-color: rgb(255, 0, 255);"></div>
+		<div id="cmin4" style="position: absolute; top: 28.2361px; left: 22.6489px; visibility: visible; width: 1px; height: 1px; font-size: 1px; z-index: 997; background-color: rgb(255, 0, 255);"></div>
+		<div id="cmin3" style="position: absolute; top: 27.4271px; left: 23.2366px; visibility: visible; width: 1px; height: 1px; font-size: 1px; z-index: 997; background-color: rgb(255, 0, 255);"></div>
+		<div id="cmin2" style="position: absolute; top: 26.618px; left: 23.8244px; visibility: visible; width: 1px; height: 1px; font-size: 1px; z-index: 997; background-color: rgb(255, 0, 255);"></div>
+		<div id="cmin1" style="position: absolute; top: 25.809px; left: 24.4122px; visibility: visible; width: 1px; height: 1px; font-size: 1px; z-index: 997; background-color: rgb(255, 0, 255);"></div>
+	<!-- minute end-->
+	<!-- hour -->
+		<div id="chour16" style="position: absolute; top: 9.7831px; left: 29.9443px; visibility: visible; width: 2px; height: 2px; font-size: 2px; z-index: 998; background-color: rgb(255, 255, 0);"></div>
+		<div id="chour15" style="position: absolute; top: 10.7342px; left: 29.6353px; visibility: visible; width: 2px; height: 2px; font-size: 2px; z-index: 998; background-color: rgb(255, 255, 0);"></div>
+		<div id="chour14" style="position: absolute; top: 11.6852px; left: 29.3262px; visibility: visible; width: 2px; height: 2px; font-size: 2px; z-index: 998; background-color: rgb(255, 255, 0);"></div>
+		<div id="chour13" style="position: absolute; top: 12.6363px; left: 29.0172px; visibility: visible; width: 2px; height: 2px; font-size: 2px; z-index: 998; background-color: rgb(255, 255, 0);"></div>
+		<div id="chour12" style="position: absolute; top: 13.5873px; left: 28.7082px; visibility: visible; width: 2px; height: 2px; font-size: 2px; z-index: 998; background-color: rgb(255, 255, 0);"></div>
+		<div id="chour11" style="position: absolute; top: 14.5384px; left: 28.3992px; visibility: visible; width: 2px; height: 2px; font-size: 2px; z-index: 998; background-color: rgb(255, 255, 0);"></div>
+		<div id="chour10" style="position: absolute; top: 15.4894px; left: 28.0902px; visibility: visible; width: 2px; height: 2px; font-size: 2px; z-index: 998; background-color: rgb(255, 255, 0);"></div>
+		<div id="chour9" style="position: absolute; top: 16.4405px; left: 27.7812px; visibility: visible; width: 2px; height: 2px; font-size: 2px; z-index: 998; background-color: rgb(255, 255, 0);"></div>
+		<div id="chour8" style="position: absolute; top: 17.3915px; left: 27.4721px; visibility: visible; width: 2px; height: 2px; font-size: 2px; z-index: 998; background-color: rgb(255, 255, 0);"></div>
+		<div id="chour7" style="position: absolute; top: 18.3426px; left: 27.1631px; visibility: visible; width: 2px; height: 2px; font-size: 2px; z-index: 998; background-color: rgb(255, 255, 0);"></div>
+		<div id="chour6" style="position: absolute; top: 19.2937px; left: 26.8541px; visibility: visible; width: 2px; height: 2px; font-size: 2px; z-index: 998; background-color: rgb(255, 255, 0);"></div>
+		<div id="chour5" style="position: absolute; top: 20.2447px; left: 26.5451px; visibility: visible; width: 2px; height: 2px; font-size: 2px; z-index: 998; background-color: rgb(255, 255, 0);"></div>
+		<div id="chour4" style="position: absolute; top: 21.1958px; left: 26.2361px; visibility: visible; width: 2px; height: 2px; font-size: 2px; z-index: 998; background-color: rgb(255, 255, 0);"></div>
+		<div id="chour3" style="position: absolute; top: 22.1468px; left: 25.9271px; visibility: visible; width: 2px; height: 2px; font-size: 2px; z-index: 998; background-color: rgb(255, 255, 0);"></div>
+		<div id="chour2" style="position: absolute; top: 23.0979px; left: 25.618px; visibility: visible; width: 2px; height: 2px; font-size: 2px; z-index: 998; background-color: rgb(255, 255, 0);"></div>
+		<div id="chour1" style="position: absolute; top: 24.0489px; left: 25.309px; visibility: visible; width: 2px; height: 2px; font-size: 2px; z-index: 998; background-color: rgb(255, 255, 0);"></div>
+	<!-- hour end-->
+	<!-- second -->
+		<div id="csec22" style="position: absolute; top: 8.65081px; left: 39.7209px; visibility: visible; width: 1px; height: 1px; font-size: 1px; z-index: 999; background-color: rgb(0, 255, 255);"></div>
+		<div id="csec21" style="position: absolute; top: 9.39396px; left: 39.0517px; visibility: visible; width: 1px; height: 1px; font-size: 1px; z-index: 999; background-color: rgb(0, 255, 255);"></div>
+		<div id="csec20" style="position: absolute; top: 10.1371px; left: 38.3826px; visibility: visible; width: 1px; height: 1px; font-size: 1px; z-index: 999; background-color: rgb(0, 255, 255);"></div>
+		<div id="csec19" style="position: absolute; top: 10.8802px; left: 37.7135px; visibility: visible; width: 1px; height: 1px; font-size: 1px; z-index: 999; background-color: rgb(0, 255, 255);"></div>
+		<div id="csec18" style="position: absolute; top: 11.6234px; left: 37.0444px; visibility: visible; width: 1px; height: 1px; font-size: 1px; z-index: 999; background-color: rgb(0, 255, 255);"></div>
+		<div id="csec17" style="position: absolute; top: 12.3665px; left: 36.3752px; visibility: visible; width: 1px; height: 1px; font-size: 1px; z-index: 999; background-color: rgb(0, 255, 255);"></div>
+		<div id="csec16" style="position: absolute; top: 13.1097px; left: 35.7061px; visibility: visible; width: 1px; height: 1px; font-size: 1px; z-index: 999; background-color: rgb(0, 255, 255);"></div>
+		<div id="csec15" style="position: absolute; top: 13.8528px; left: 35.037px; visibility: visible; width: 1px; height: 1px; font-size: 1px; z-index: 999; background-color: rgb(0, 255, 255);"></div>
+		<div id="csec14" style="position: absolute; top: 14.596px; left: 34.3678px; visibility: visible; width: 1px; height: 1px; font-size: 1px; z-index: 999; background-color: rgb(0, 255, 255);"></div>
+		<div id="csec13" style="position: absolute; top: 15.3391px; left: 33.6987px; visibility: visible; width: 1px; height: 1px; font-size: 1px; z-index: 999; background-color: rgb(0, 255, 255);"></div>
+		<div id="csec12" style="position: absolute; top: 16.0823px; left: 33.0296px; visibility: visible; width: 1px; height: 1px; font-size: 1px; z-index: 999; background-color: rgb(0, 255, 255);"></div>
+		<div id="csec11" style="position: absolute; top: 16.8254px; left: 32.3604px; visibility: visible; width: 1px; height: 1px; font-size: 1px; z-index: 999; background-color: rgb(0, 255, 255);"></div>
+		<div id="csec10" style="position: absolute; top: 17.5686px; left: 31.6913px; visibility: visible; width: 1px; height: 1px; font-size: 1px; z-index: 999; background-color: rgb(0, 255, 255);"></div>
+		<div id="csec9" style="position: absolute; top: 18.3117px; left: 31.0222px; visibility: visible; width: 1px; height: 1px; font-size: 1px; z-index: 999; background-color: rgb(0, 255, 255);"></div>
+		<div id="csec8" style="position: absolute; top: 19.0548px; left: 30.353px; visibility: visible; width: 1px; height: 1px; font-size: 1px; z-index: 999; background-color: rgb(0, 255, 255);"></div>
+		<div id="csec7" style="position: absolute; top: 19.798px; left: 29.6839px; visibility: visible; width: 1px; height: 1px; font-size: 1px; z-index: 999; background-color: rgb(0, 255, 255);"></div>
+		<div id="csec6" style="position: absolute; top: 20.5411px; left: 29.0148px; visibility: visible; width: 1px; height: 1px; font-size: 1px; z-index: 999; background-color: rgb(0, 255, 255);"></div>
+		<div id="csec5" style="position: absolute; top: 21.2843px; left: 28.3457px; visibility: visible; width: 1px; height: 1px; font-size: 1px; z-index: 999; background-color: rgb(0, 255, 255);"></div>
+		<div id="csec4" style="position: absolute; top: 22.0274px; left: 27.6765px; visibility: visible; width: 1px; height: 1px; font-size: 1px; z-index: 999; background-color: rgb(0, 255, 255);"></div>
+		<div id="csec3" style="position: absolute; top: 22.7706px; left: 27.0074px; visibility: visible; width: 1px; height: 1px; font-size: 1px; z-index: 999; background-color: rgb(0, 255, 255);"></div>
+		<div id="csec2" style="position: absolute; top: 23.5137px; left: 26.3383px; visibility: visible; width: 1px; height: 1px; font-size: 1px; z-index: 999; background-color: rgb(0, 255, 255);"></div>
+		<div id="csec1" style="position: absolute; top: 24.2569px; left: 25.6691px; visibility: visible; width: 1px; height: 1px; font-size: 1px; z-index: 999; background-color: rgb(0, 255, 255);"></div>
+	<!-- second end-->
+		<div id="ampm" style="position: absolute; top: 8.33333px; left: 0px; visibility: visible; width: 50px; font-family: helvetica, arial, sans-serif; font-size: 4.16667px; color: rgb(255, 0, 0); text-align: center; padding-top: 10px; z-index: 990;">
+		</div>
+		<div id="zone" style="position: absolute; top: 0px; left: 0px; visibility: hidden; width: 50px; font-family: helvetica, arial, sans-serif; font-size: 4.16667px; color: rgb(0, 255, 0); text-align: center; padding-top: 10px; z-index: 990;">
+		</div>
+		</div>
+		</div>
+	</div>
+</body>
+</html>
