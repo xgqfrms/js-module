@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>rgb Hex convert test</title>
+  
+</head>
+<body>
+  <h1>rgb Hex convert test</h1>
+  <div class="content-box">
+      Enter rgb or hex value: <input id="rgbHex-input" type="text"/> <div id="rgbHex-color"></div> <div id="rgbHex-output"></div>
+<script src="lib/jquery-1.10.1.min.js"></script>
+<script src="./RGBHex.min.js"></script>
+  <script>
+        $('#rgbHex-input').keyup(function(){
+          var val = $.rgbHex($('#rgbHex-input').val());
+
+          if(val) {
+            $('#rgbHex-output').html(val + '&nbsp;&nbsp;');
+            $('#rgbHex-color').css({display:'inline-block', backgroundColor: val});
+          }
+          else {
+            $('#rgbHex-output').html("Invalid value.");
+            $('#rgbHex-color').hide();
+          }
+        });
+      </script>
+</body>
+</html>

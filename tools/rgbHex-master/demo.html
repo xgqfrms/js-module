@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>rgb Hex convert test</title>
+  <script src="lib/jquery-1.10.1.min.js"></script>
+  <script src="./RGBHex.min.js"></script>
+  <!-- 
+  <link rel="stylesheet" href="lib/qunit/qunit.css" media="screen">
+  <script src="lib/qunit/qunit.js"></script>
+  <script src="tests.js"></script> 
+  <h1 id="qunit-header">Test Suite</h1>
+  <h2 id="qunit-banner"></h2>
+  <div id="qunit-testrunner-toolbar"></div>
+  <h2 id="qunit-userAgent"></h2>
+  <ol id="qunit-tests"></ol>
+  <div id="qunit-fixture">
+  </div>
+  -->
+
+</head>
+<body>
+  <h1>rgb Hex convert test</h1>
+  <div class="content-box">
+      Enter rgb or hex value: <input id="rgbHex-input" type="text"/> <div id="rgbHex-color"></div> <div id="rgbHex-output"></div>
+  <script type="text/javascript">
+        $('#rgbHex-input').keyup(function(){
+          var val = $.rgbHex($('#rgbHex-input').val());
+
+          if(val) {
+            $('#rgbHex-output').html(val + '&nbsp;&nbsp;');
+            $('#rgbHex-color').css({display:'inline-block', backgroundColor: val});
+          }
+          else {
+            $('#rgbHex-output').html("Invalid value.");
+            $('#rgbHex-color').hide();
+          }
+        });
+      </script>
+</body>
+</html>
